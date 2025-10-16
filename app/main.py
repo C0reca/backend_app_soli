@@ -12,7 +12,8 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="Gestão Empresarial API",
     description="API para gestão de clientes, funcionários, processos e automação de ficheiros.",
-    version="1.0.0"
+    version="1.0.0",
+    root_path="/api"
 )
 
 # Middleware CORS (para comunicação com frontend)
