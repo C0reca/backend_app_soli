@@ -22,8 +22,8 @@ def criar_cliente(cliente: ClienteCreate, db: Session = Depends(get_db)):
     return crud_cliente.create_cliente(db, cliente)
 
 @router.get("/", response_model=List[ClienteResponse])
-def listar_clientes(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
-    return crud_cliente.get_clientes(db, skip=skip, limit=limit)
+def listar_clientes(skip: int = 0, db: Session = Depends(get_db)):
+    return crud_cliente.get_clientes(db, skip=skip)
 
 @router.get("/{cliente_id}", response_model=ClienteResponse)
 def obter_cliente(cliente_id: int, db: Session = Depends(get_db)):
