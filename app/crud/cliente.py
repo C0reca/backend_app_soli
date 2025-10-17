@@ -55,7 +55,7 @@ def create_cliente(db: Session, cliente: ClienteCreate) -> Cliente:
     return novo_cliente
 
 
-def get_clientes(db: Session, skip: int = 0, limit: int = 100):
+def get_clientes(db: Session, skip: int = 0, limit: int = 99999):
     return db.query(Cliente).offset(skip).limit(limit).all()
 
 
