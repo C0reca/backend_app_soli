@@ -9,7 +9,7 @@ class ClienteBase(BaseModel):
 
     # Dados principais
     nome: Optional[str] = None
-    email: Optional[EmailStr] = None
+    email: Optional[str] = None
     telefone: Optional[str] = None
 
     # Morada
